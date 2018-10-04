@@ -1,3 +1,31 @@
-<p>
-  insurancecard works!
-</p>
+<!-- <mat-card>
+  <mat-card-content> -->
+    <div class="example-container">
+      <div>
+        <label for="carrierName">Insurance Carrier:</label>
+        <input type="text" id="carrierName" [(value)]="card.CarrierName" />
+      </div>
+      <div>
+        <label for="carrierType">Insurance Type/Location:</label>
+        <input type="text" id="carrierType" [(value)]="card.CarrierType" />
+      </div>
+      <div>
+        <label for="group">Group Number:</label>
+        <input id="group" [(value)]="card.Group" />
+      </div>
+      <div>
+        <label for="member">Member ID:</label>
+        <input id="member" [(value)]="card.MemberId" />
+      </div>
+    </div>
+    <div>
+      <div>
+        <img class="mat-card-image" width="300px" height="200px" [src]="card.ImageUrl" />
+      </div>
+    </div>
+  <!-- </mat-card-content>
+  <mat-card-footer> -->
+    <button>Continue</button>
+    <button>Cancel</button>
+  <!-- </mat-card-footer>
+</mat-card> -->

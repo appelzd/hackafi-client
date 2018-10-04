@@ -1,0 +1,13 @@
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+
+.example-container {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 10px
+  }
+  
+  .example-container > * {
+    width: 60%;
+  }
+  
+  
