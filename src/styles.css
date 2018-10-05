@@ -1,4 +1,78 @@
 /* You can add global styles to this file, and also import other style files */
-div{
-    padding: 10px;
+
+.mat-expansion-panel-body {
+  padding: 0px;
 }
+
+#defaults-dialog {
+  overflow: hidden;
+}
+
+mat-dialog-container.mat-dialog-container {
+  padding: 0px;
+}
+
+.no-overflow-dialog .mat-dialog-container {
+  overflow: hidden;
+  max-height: 100%;
+  max-width: 100%;
+
+}
+
+#cdk-accordion-child-1 > div {
+  padding: 0px;
+}
+
+html, body {
+  margin: 0px;
+  height: 100%;
+  background-color: #fafafa; 
+
+}
+
+.margin-8 {
+  margin: 8px
+}
+
+.margin-16 {
+  margin: 16px
+}
+
+.margin-24 {
+  margin: 24px;
+}
+
+.margin-40 {
+  margin: 40px
+}
+/*Disable animation of table sort arrows so arrows persist*/
+.mat-sort-header-arrow, .ng-trigger-arrowPosition{
+  transform: none !important;
+  -webkit-transition: none !important;
+  transition: none !important;
+  opacity: 1 !important;
+}
+
+/*Numbers in columns should be right-aligned*/
+th.numeral-alignment, td.numeral-alignment {
+  text-align: right !important;
+}
+
+
+button.outline.mat-button {
+    border: 1px solid;
+  }
+  
+ label{
+     margin: 16px;
+ }
+
+ input{
+     outline: none
+ }
+
+ div{
+    padding: 8px;
+ }
+
+

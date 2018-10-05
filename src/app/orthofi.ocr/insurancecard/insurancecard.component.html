@@ -1,34 +1,34 @@
 <!-- <mat-card>
   <mat-card-content> -->
-    <div class="example-container">
-      <div>
-        <label for="carrierName">Insurance Carrier:</label>
-        <input type="text" id="carrierName" [(value)]="card.CarrierName" />
-      </div>
-      <div>
-        <label for="carrierType">Insurance Type/Location:</label>
-        <input type="text" id="carrierType" [(value)]="card.CarrierType" />
-      </div>
-      <div>
-        <label for="group">Group Number:</label>
-        <input id="group" [(value)]="card.Group" />
-      </div>
-      <div>
-        <label for="member">Member ID:</label>
-        <input id="member" [(value)]="card.MemberId" />
-      </div>
+<div class="example-container" style="float: left">
+  <div>
+    <div>
+      <label for="carrierName">Insurance Carrier:</label>
+      <input type="text" id="carrierName" [(value)]="card.CarrierName" />
     </div>
     <div>
-      <div>
-        <img class="mat-card-image" width="300px" height="200px" [src]="card.ImageUrl" />
-      </div>
+      <label for="carrierType">Insurance Type/Location:</label>
+      <input type="text" id="carrierType" [(value)]="card.CarrierType" />
     </div>
-    <div *ngIf="showuploader">
-        <app-uploadpic (filechanged)="onFileChanged($event)"></app-uploadpic>
+    <div>
+      <label for="group">Group Number:</label>
+      <input id="group" [(value)]="card.Group" />
     </div>
-  <!-- </mat-card-content>
+    <div>
+      <label for="member">Member ID:</label>
+      <input id="member" [(value)]="card.MemberId" />
+    </div>
+  </div>
+</div>
+<div>
+    <img class="mat-card-image" width="300px" height="200px" [src]="card.ImageUrl" />
+  </div>
+<div *ngIf="showuploader" style="float: right">
+  <app-uploadpic (filechanged)="onFileChanged($event)"></app-uploadpic>
+</div>
+<!-- </mat-card-content>
   <mat-card-footer> -->
-    <button (click)="showUploader()">add new card</button>
-    <button></button>
-  <!-- </mat-card-footer>
+<button (click)="showUploader()">add new card</button>
+<button></button>
+<!-- </mat-card-footer>
 </mat-card> -->
