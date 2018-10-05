@@ -23,9 +23,12 @@
         <img class="mat-card-image" width="300px" height="200px" [src]="card.ImageUrl" />
       </div>
     </div>
+    <div *ngIf="showuploader">
+        <app-uploadpic filecanged></app-uploadpic>
+    </div>
   <!-- </mat-card-content>
   <mat-card-footer> -->
-    <button>Continue</button>
-    <button>Cancel</button>
+    <button (click)="showUploader()">add new card</button>
+    <button></button>
   <!-- </mat-card-footer>
 </mat-card> -->

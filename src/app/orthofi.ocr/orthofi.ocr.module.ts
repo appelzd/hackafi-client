@@ -1,10 +1,11 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { InsurancecardComponent } from './insurancecard/insurancecard.component';
+import { InsuranceCardComponent } from './insurancecard/insurancecard.component';
 import { HttpClientModule } from "@angular/common/http"
 import { MatCardModule, MatFormFieldModule } from "@angular/material"
-import { UploadpicComponent } from './uploadpic/uploadpic.component';
+import { UploadPicComponent } from './uploadpic/uploadpic.component';
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
+
 
 @NgModule({
   imports: [
@@ -12,12 +13,10 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
     HttpClientModule,
     MatCardModule,
     BrowserAnimationsModule,
-    MatFormFieldModule,
-     UploadpicComponent
-  ],
+    MatFormFieldModule],
   exports: [
-    InsurancecardComponent
+    InsuranceCardComponent
   ],
-  declarations: [InsurancecardComponent]
+  declarations: [InsuranceCardComponent, UploadPicComponent]
 })
 export class OcrModule { }
