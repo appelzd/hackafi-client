@@ -36,5 +36,7 @@ export class InsuranceCardComponent implements OnInit {
           console.log(data);
           this.card = data as InsuranceCard
         });
+
+        this.card.ImageUrl = event; 
   }
 }
