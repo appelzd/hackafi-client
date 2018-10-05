@@ -17,8 +17,9 @@ export class InsuranceCardComponent implements OnInit {
 
   ngOnInit() {
     this.http.getInsuranceCard().subscribe((data) => {
-      this.card = data as InsuranceCard;
+      this.card = data as InsuranceCard 
     })
+    this.card.ImageUrl = 'https://s3-us-west-2.amazonaws.com/appel-hack-too/delta+dental.JPG';
   }
   showUploader() {
     this.showuploader = true;

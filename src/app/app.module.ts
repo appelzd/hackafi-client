@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import {MatCardModule} from '@angular/material'
 
 import { OcrModule } from "./orthofi.ocr/orthofi.ocr.module";
 import { AppComponent } from './app.component';
@@ -11,7 +11,8 @@ import { AppComponent } from './app.component';
   ],
   imports: [
     BrowserModule,
-    OcrModule
+    OcrModule,
+    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]
