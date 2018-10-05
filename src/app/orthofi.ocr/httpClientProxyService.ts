@@ -12,16 +12,32 @@ import { tap } from "rxjs/operators";
 export class HttpClientProxyService {
     constructor(private http: HttpClient) { }
 
-    url: string = "http://localhost:53219/insurance/card";
+    httpHeaders = 
+    {'Content-Type':  'text/plain'}
+  
+    httpOptions = {
+        withCredentials: false,
+        headers: this.httpHeaders
+    }
+
+    httpOptions2 = {
+        withCredentials: false,
+    }
+
+    url: string = "http://localhost:53219/card/1";
+    postUrl: string = "http://localhost:53219/card/add";
 
     getInsuranceCard(): Observable<any> {
-        return this.http.get(this.url);
+        return this.http.get(this.url,  this.httpOptions2);
     }
 
     processCard(event) {
         console.log('return http call')
         console.log(event);
-        return this.http.post(this.url, event); 
+        var removeString = 'data:image/jpeg;base64,';
+        var sendthis = event.slice(removeString.length)
+
+        return this.http.post(this.postUrl, sendthis, this.httpOptions); 
     }
 }
 

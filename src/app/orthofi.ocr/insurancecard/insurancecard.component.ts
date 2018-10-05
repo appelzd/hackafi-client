@@ -17,9 +17,13 @@ export class InsuranceCardComponent implements OnInit {
 
   ngOnInit() {
     this.http.getInsuranceCard().subscribe((data) => {
-      this.card = data as InsuranceCard 
+      this.card = new InsuranceCard();
+      this.card.CarrierName = data.Data['CarrierName'];
+      this.card.CarrierType = data.Data['CarrierType'];
+      this.card.Group = data.Data['Group'] ;
+      this.card.ImageUrl = data.Data['ImageUrl'] ? data.Data['ImageUrl'] : this.card.ImageUrl;
+      this.card.MemberId = data.Data['MemberId'];
     })
-    this.card.ImageUrl = 'https://s3-us-west-2.amazonaws.com/appel-hack-too/delta+dental.JPG';
   }
   showUploader() {
     this.showuploader = true;
@@ -28,13 +32,16 @@ export class InsuranceCardComponent implements OnInit {
   onFileChanged(event)
   {
     console.log('start post');
-    console.log(event);
       this.http.processCard(event).subscribe(
         data => 
         {
-          console.log('finihs post');
-          console.log(data);
-          this.card = data as InsuranceCard
+          console.log('finish post');
+          
+          this.card = data as InsuranceCard;
+           if(data['ImageUrl'] ) 
+             this.card.ImageUrl = data['ImageUrl'] ;
+            else 
+             this.card.ImageUrl = event;
         });
 
         this.card.ImageUrl = event; 
