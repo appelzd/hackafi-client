@@ -24,7 +24,7 @@
       </div>
     </div>
     <div *ngIf="showuploader">
-        <app-uploadpic filecanged></app-uploadpic>
+        <app-uploadpic (filechanged)="onFileChanged($event)"></app-uploadpic>
     </div>
   <!-- </mat-card-content>
   <mat-card-footer> -->

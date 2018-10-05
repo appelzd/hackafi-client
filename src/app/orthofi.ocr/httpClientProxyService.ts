@@ -12,22 +12,16 @@ import { tap } from "rxjs/operators";
 export class HttpClientProxyService {
     constructor(private http: HttpClient) { }
 
-    newHeaders: HttpHeaders = new HttpHeaders().set("Access-Control-Allow-Origin", "http://localhost:53219");
-
-    url: string = "http://localhost:53219/insurance";
+    url: string = "http://localhost:53219/insurance/card";
 
     getInsuranceCard(): Observable<any> {
-
-
-        let t = this.http.get(this.url)
-        t.pipe(
-            tap(h => console.log(t))
-        )
-        return t;
+        return this.http.get(this.url);
     }
 
     processCard(event) {
-
+        console.log('return http call')
+        console.log(event);
+        return this.http.post(this.url, event); 
     }
 }
 

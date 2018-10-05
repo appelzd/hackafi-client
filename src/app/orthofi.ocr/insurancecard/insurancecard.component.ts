@@ -14,20 +14,26 @@ export class InsuranceCardComponent implements OnInit {
 
   card: InsuranceCard = new InsuranceCard();
   showuploader: boolean;
+
   ngOnInit() {
     this.http.getInsuranceCard().subscribe((data) => {
-
-      let g = '';
       this.card = data as InsuranceCard;
-
     })
   }
   showUploader() {
     this.showuploader = true;
   }
 
-  fileadded(event)
+  onFileChanged(event)
   {
-      this.http.processCard(event);
+    console.log('start post');
+    console.log(event);
+      this.http.processCard(event).subscribe(
+        data => 
+        {
+          console.log('finihs post');
+          console.log(data);
+          this.card = data as InsuranceCard
+        });
   }
 }
