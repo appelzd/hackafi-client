@@ -11,7 +11,13 @@
   }
 
   input{
-    outline: none
+    outline: none;
+    width: 400px;
+    }
+
+  label{
+    width:200px;
   }
   
-  
+
+

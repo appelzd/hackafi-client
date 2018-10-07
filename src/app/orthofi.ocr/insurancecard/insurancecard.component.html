@@ -1,27 +1,27 @@
-<div class="example-container" style="float: left">
+<div class="example-container"  style="float: left">
   <div>
-    <div>
+    <div class="input-group" >
       <label for="carrierName">Insurance Carrier:</label>
-      <input type="text" id="carrierName" [(value)]="card.CarrierName" />
+      <input type="text" class="input-group-text" id="carrierName" [(value)]="card.CarrierName" />
     </div>
-    <div>
+    <div class="input-group">
       <label for="carrierType">Insurance Type/Location:</label>
-      <input type="text" id="carrierType" [(value)]="card.CarrierType" />
+      <input type="text" class="input-group-text" id="carrierType" [(value)]="card.CarrierType" />
     </div>
-    <div>
+    <div class="input-group">
       <label for="group">Group Number:</label>
-      <input id="group" [(value)]="card.Group" />
+      <input id="group" class="input-group-text" [(value)]="card.Group" />
     </div>
-    <div>
+    <div class="input-group">
       <label for="member">Member ID:</label>
-      <input id="member" [(value)]="card.MemberId" />
+      <input id="member" class="input-group-text" [(value)]="card.MemberId" />
     </div>
   </div>
 </div>
 <div >
-    <img [src]="card.ImageUrl" width="200px" />
+    <img [src]="card.ImageUrl" width="500px" />
   </div>
 <div *ngIf="showuploader" >
   <app-uploadpic (filechanged)="onFileChanged($event)"></app-uploadpic>
 </div>
-<button (click)="showUploader()">add new card</button>
+<button (click)="showUploader()" class="btn btn-dark">add new card</button>
